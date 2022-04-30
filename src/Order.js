@@ -17,7 +17,7 @@ const Order = () => {
       <div className="row justify-content-center">
         <div className="col-12">
           <h5>
-            Order({totalUniqueItems}) total Orders: ({totalItems})
+            Order({totalUniqueItems}) Total Orders: ({totalItems})
           </h5>
           <table className="table table-light table-hover m-0">
             <tbody>
@@ -29,11 +29,29 @@ const Order = () => {
                     <td>{item.price}</td>
                     <td>Quantity ({item.quantity})</td>
                     <td>
-                        <button className="btn btn-info ms-2" onClick={()=>updateItemQuantity(item.id,item.quantity -1)}>-</button>
-                        <button className="btn btn-info ms-2" onClick={()=>updateItemQuantity(item.id,item.quantity +1)}>+</button>
+                      <button
+                        className="btn btn-info ms-2"
+                        onClick={() =>
+                          updateItemQuantity(item.id, item.quantity - 1)
+                        }
+                      >
+                        -
+                      </button>
+                      <button
+                        className="btn btn-info ms-2"
+                        onClick={() =>
+                          updateItemQuantity(item.id, item.quantity + 1)
+                        }
+                      >
+                        +
+                      </button>
 
-                        <button className="btn btn-danger ms-2" 
-                        onClick={()=>removeItem(item.id)}>Clear All</button>
+                      <button
+                        className="btn btn-danger ms-2"
+                        onClick={() => removeItem(item.id)}
+                      >
+                        Clear All
+                      </button>
                     </td>
                   </tr>
                 );
@@ -45,8 +63,8 @@ const Order = () => {
           <h2>Total Price: Rs {cartTotal}</h2>
         </div>
         <div className="col-auto">
-          <button className="btn btn-danger" onClick={()=>emptyCart()}>
-              Pay
+          <button className="btn btn-danger" onClick={() => emptyCart()}>
+            Pay
           </button>
         </div>
       </div>

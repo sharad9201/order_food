@@ -14,7 +14,7 @@ const data = {
     {
       id: 1,
       img: img2,
-      title: "Chicken Chowmiem",
+      title: "Chicken pasta",
       desc: "",
       price: 160,
     },
