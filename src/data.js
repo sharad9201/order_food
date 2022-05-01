@@ -12,14 +12,14 @@ const data = {
       price: 140,
     },
     {
-      id: 1,
+      id: 2,
       img: img2,
       title: "Chicken pasta",
       desc: "",
       price: 160,
     },
     {
-      id: 1,
+      id: 3,
       img: img3,
       title: "Chicken Salad",
       desc: "",
